@@ -2,15 +2,20 @@ import 'package:clients_dart_api/app/api/api.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test('Deve conter uma route "/clientes', () async {
-    final controller = ClientesController();
+  late ClientesController controller;
 
-    expect(controller.route, '/clientes');
+  setUpAll(() {
+    controller = ClientesController();
   });
 
-  test('Deve conter uma key "GET" para o handler GetClientesHandler', () async {
-    final controller = ClientesController();
+  group('ClientesController:', () {
+    test('Deve conter uma route "/clientes', () async {
+      expect(controller.route, '/clientes');
+    });
 
-    expect(controller.handlers['GET'], isA<GetClienteshandler>());
+    test('Deve conter uma key "GET" para o handler GetClientesHandler',
+        () async {
+      expect(controller.handlers['GET'], isA<GetClienteshandler>());
+    });
   });
 }

@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('Deve conter uma route "/clientes', () async {
-    final controller = ClientesController(route: '/clientes');
+    final controller = ClientesController();
 
     expect(controller.route, '/clientes');
   });

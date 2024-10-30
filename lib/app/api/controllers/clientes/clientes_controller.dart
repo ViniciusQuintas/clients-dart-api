@@ -1,10 +1,12 @@
 part of api;
 
-class GetClienteshandler {}
+abstract class Handler {}
+
+class GetClienteshandler implements Handler {}
 
 abstract class Controller {
   final String route;
-  final Map<String, GetClienteshandler> handlers;
+  final Map<String, Handler> handlers;
 
   Controller({required this.route, required this.handlers});
 }

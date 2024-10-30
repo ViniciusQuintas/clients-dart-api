@@ -1,9 +1,14 @@
 part of api;
 
-class ClientesController {
+abstract class Controller {
   final String route;
 
-  ClientesController({
+  Controller({
     required this.route,
   });
+}
+
+class ClientesController implements Controller {
+  @override
+  String get route => '/clientes';
 }

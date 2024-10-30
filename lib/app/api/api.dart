@@ -1,3 +1,3 @@
 library api;
 
-part "controller/clientes/clientes_controller.dart";
+part "controllers/clientes/clientes_controller.dart";

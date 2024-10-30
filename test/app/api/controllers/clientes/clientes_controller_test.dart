@@ -7,4 +7,10 @@ void main() {
 
     expect(controller.route, '/clientes');
   });
+
+  test('Deve conter uma key "GET" para o handler GetClientesHandler', () async {
+    final controller = ClientesController();
+
+    expect(controller.handlers['GET'], isA<GetClienteshandler>());
+  });
 }

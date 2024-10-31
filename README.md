@@ -49,7 +49,6 @@ Abaixo, a estrutura principal do projeto, organizada para seguir os princípios 
     dart pub get
    ```
 3. Configure as variáveis de ambiente no arquivo `.env` conforme o exemplo em `.env.copy`
-<br>
 
 4. Execute os containers com Docker:
    ```bash

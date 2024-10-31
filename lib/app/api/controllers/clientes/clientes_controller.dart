@@ -1,14 +1,38 @@
 part of api;
 
 class ClientesController implements Controller {
-  final GetClientesUseCases getClientesUseCases;
+  final GetClientesUseCase getClientesUseCase;
+  final AddClienteUseCase addClienteUseCase;
+  final GetClienteByIdUseCase getClienteByIdUseCase;
+  final DeleteClienteUseCase deleteClienteUseCase;
+  final UpdateClienteUseCase updateClienteUseCase;
 
-  ClientesController({required this.getClientesUseCases});
+  ClientesController({
+    required this.getClientesUseCase,
+    required this.addClienteUseCase,
+    required this.getClienteByIdUseCase,
+    required this.deleteClienteUseCase,
+    required this.updateClienteUseCase,
+  });
   @override
   String get route => '/clientes';
 
   @override
-  Map<String, GetClienteshandler> get handlers => {
-        'GET': GetClienteshandler(getClientesUseCase: getClientesUseCases),
+  Map<String, Handler> get handlers => {
+        'GET': GetClientesHandler(
+          getClientesUseCase: getClientesUseCase,
+        ),
+        'GET /{clienteId}': GetClienteByIdHandler(
+          getClienteByIdUseCase: getClienteByIdUseCase,
+        ),
+        'DELETE /{clienteId}': DeleteClienteHandler(
+          deleteClienteUseCase: deleteClienteUseCase,
+        ),
+        'PUT /{clienteId}': UpdateClienteHandler(
+          updateClienteUseCase: updateClienteUseCase,
+        ),
+        'POST': AddClienteHandler(
+          addClienteUseCase: addClienteUseCase,
+        ),
       };
 }

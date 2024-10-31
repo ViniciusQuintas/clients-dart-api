@@ -6,9 +6,10 @@ class Cliente {
   final String email;
   final String telefone;
 
-  Cliente(
-      {required this.id,
-      required this.nome,
-      required this.email,
-      required this.telefone});
+  Cliente({
+    required this.id,
+    required this.nome,
+    required this.email,
+    required this.telefone,
+  });
 }

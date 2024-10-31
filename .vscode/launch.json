@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "clients-dart-api",
+            "name": "clients_dart_api",
             "request": "launch",
             "type": "dart",
             "program": "bin/server.dart"

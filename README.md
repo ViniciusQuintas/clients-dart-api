@@ -1,6 +1,6 @@
 # Clients Dart API
 
-Este projeto é uma API para gerenciamento de clientes desenvolvida em Dart, focando na prática de conceitos de **Clean Architecture**, **Test-Driven Development (TDD)** e **princípios SOLID**. O principal objetivo é aprofundar os estudos na linguagem Dart e aplicar boas práticas de arquitetura e testes. Este projeto utiliza PostgreSQL como banco de dados e está containerizado com Docker.
+Este projeto é uma API para gerenciamento de clientes desenvolvida em Dart, focando na prática de conceitos de **Clean Architecture**, **Test-Driven Development (TDD)** e **princípios SOLID**. O principal objetivo é aprofundar os estudos na linguagem Dart e aplicar boas práticas de arquitetura e testes. Este projeto utiliza PostgreSQL como banco de dados e está containerizado com Docker. 
 
 ## Tecnologias e Ferramentas
 

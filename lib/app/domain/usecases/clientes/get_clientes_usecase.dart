@@ -1,5 +1,5 @@
 part of domain;
 
-abstract class GetClientesUsecase {
+abstract class GetClientesUseCase {
   Future<List<Cliente>> call();
 }
